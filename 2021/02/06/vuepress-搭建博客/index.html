@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress 搭建个人博客 | 寒冰阁序</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <meta name="description" content="VuePress 是一个极简静态网站生成器
+
+简单来说，我们可以通过 VuePress 生成我们的博客，让后推送到对应到服务器即可。
+
+步骤如下
+安装 VuePress
+安装喜欢 VuePress 主题
+在 dev 环境编写博客，配置 UI
+满意之后，build 需要到静态文件
+推送到服务器，例如 Github Pages
+
+实践
+
+安装
+
+`shel ...">
+    
+    <link rel="preload" href="/assets/css/0.styles.8bbe3483.css" as="style"><link rel="preload" href="/assets/js/app.3b107010.js" as="script"><link rel="preload" href="/assets/js/6.1d190480.js" as="script"><link rel="preload" href="/assets/js/3.41d2f1e3.js" as="script"><link rel="preload" href="/assets/js/23.508f029c.js" as="script"><link rel="prefetch" href="/assets/js/10.57570850.js"><link rel="prefetch" href="/assets/js/11.f4014f88.js"><link rel="prefetch" href="/assets/js/12.c14d23f8.js"><link rel="prefetch" href="/assets/js/13.76361d67.js"><link rel="prefetch" href="/assets/js/14.e24d5c17.js"><link rel="prefetch" href="/assets/js/15.667fd8d4.js"><link rel="prefetch" href="/assets/js/16.99d0461b.js"><link rel="prefetch" href="/assets/js/17.0085edab.js"><link rel="prefetch" href="/assets/js/18.59304cee.js"><link rel="prefetch" href="/assets/js/19.573e27f5.js"><link rel="prefetch" href="/assets/js/20.170379ce.js"><link rel="prefetch" href="/assets/js/21.114eeab8.js"><link rel="prefetch" href="/assets/js/22.0b4fda6d.js"><link rel="prefetch" href="/assets/js/24.8df22d57.js"><link rel="prefetch" href="/assets/js/25.ed3f9c64.js"><link rel="prefetch" href="/assets/js/26.fdaad824.js"><link rel="prefetch" href="/assets/js/27.ae095ed2.js"><link rel="prefetch" href="/assets/js/28.f3be2872.js"><link rel="prefetch" href="/assets/js/29.0e288c4c.js"><link rel="prefetch" href="/assets/js/30.67bb441e.js"><link rel="prefetch" href="/assets/js/31.ecdd1fb4.js"><link rel="prefetch" href="/assets/js/32.387b5800.js"><link rel="prefetch" href="/assets/js/33.9ba17277.js"><link rel="prefetch" href="/assets/js/34.ba8223a2.js"><link rel="prefetch" href="/assets/js/4.6471d74d.js"><link rel="prefetch" href="/assets/js/5.ad6a474c.js"><link rel="prefetch" href="/assets/js/7.5f9bd84f.js"><link rel="prefetch" href="/assets/js/8.427074d3.js"><link rel="prefetch" href="/assets/js/9.77f58b60.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.a140baa0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8bbe3483.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">寒冰阁序 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">寒冰阁序 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        VuePress 搭建个人博客
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">bmcc</span> <span itemprop="address">   in Guangzhou</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2021-02-06T00:00:00.000Z">
+      Sat Feb 06 2021
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/Web" data-v-42ccfcd5><span data-v-42ccfcd5>Web</span></a></li><li class="post-tag" data-v-42ccfcd5><a href="/tag/VuePress" data-v-42ccfcd5><span data-v-42ccfcd5>VuePress</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><blockquote><p>VuePress 是一个极简静态网站生成器</p></blockquote> <p>简单来说，我们可以通过 VuePress 生成我们的博客，让后推送到对应到服务器即可。</p> <p>步骤如下</p> <ol><li>安装 VuePress</li> <li>安装喜欢 VuePress 主题</li> <li>在 dev 环境编写博客，配置 UI</li> <li>满意之后，build 需要到静态文件</li> <li>推送到服务器，例如 Github Pages</li></ol> <h3 id="实践"><a href="#实践" class="header-anchor">#</a> 实践</h3> <p>安装</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">mkdir</span> blog_dir <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> blog_dir // 建立一个文件夹
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">npm</span> <span class="token function">install</span> vuepress @vuepress-theme-blog // 安装 vuepress 和 theme
+vuepress dev <span class="token builtin class-name">.</span> // 本地运行
+</code></pre></div><p>编写</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">mkdir</span> .vuepress  // 配置的地方
+<span class="token function">mkdir</span> _posts     // 写文章的地方
+</code></pre></div><p>推送</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> run build // 构建静态内容
+<span class="token builtin class-name">cd</span> .vuepress/dist // 将该路径下的内容推送到服务器
+</code></pre></div><p>⚠️
+以上的命令并不可正确运行，只是流程的简单记录。建议查阅文档实践。</p> <h3 id="感受"><a href="#感受" class="header-anchor">#</a> 感受</h3> <p>相对来说，的确简单容易上手，但是需要大量阅读文档查询尝试。默认到样式也足够简约，
+如果喜欢华丽花哨一些，也可以编写插件来满足自己到需求。</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h3 active"><a href="#实践" title="实践">实践</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#感受" title="感受">感受</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3b107010.js" defer></script><script src="/assets/js/6.1d190480.js" defer></script><script src="/assets/js/3.41d2f1e3.js" defer></script><script src="/assets/js/23.508f029c.js" defer></script>
+  </body>
+</html>

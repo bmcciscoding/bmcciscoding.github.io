@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>关于 HTTPS 的一点理解 | 寒冰阁序</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <meta name="description" content="
+
+HTTP 是明文传输，不安全。既然如此，很自然想到用密文传输。常见的加密都是对称加密，即双方之间约定好加密规则，然后再进行通信。但是如果加密规则泄漏了，还是明文传输。所以问题就变成了如何告知对方加密规则。前人选择的方式是使用非对称加密。
+加密方和解密房使用不用的密钥。
+
+HTTPS 的流程
+
+1、Client 发送 https 请求到 Server
+2、Server 把带有自己公钥的CA证 ...">
+    
+    <link rel="preload" href="/assets/css/0.styles.8bbe3483.css" as="style"><link rel="preload" href="/assets/js/app.3b107010.js" as="script"><link rel="preload" href="/assets/js/6.1d190480.js" as="script"><link rel="preload" href="/assets/js/3.41d2f1e3.js" as="script"><link rel="preload" href="/assets/js/30.67bb441e.js" as="script"><link rel="prefetch" href="/assets/js/10.57570850.js"><link rel="prefetch" href="/assets/js/11.f4014f88.js"><link rel="prefetch" href="/assets/js/12.c14d23f8.js"><link rel="prefetch" href="/assets/js/13.76361d67.js"><link rel="prefetch" href="/assets/js/14.e24d5c17.js"><link rel="prefetch" href="/assets/js/15.667fd8d4.js"><link rel="prefetch" href="/assets/js/16.99d0461b.js"><link rel="prefetch" href="/assets/js/17.0085edab.js"><link rel="prefetch" href="/assets/js/18.59304cee.js"><link rel="prefetch" href="/assets/js/19.573e27f5.js"><link rel="prefetch" href="/assets/js/20.170379ce.js"><link rel="prefetch" href="/assets/js/21.114eeab8.js"><link rel="prefetch" href="/assets/js/22.0b4fda6d.js"><link rel="prefetch" href="/assets/js/23.508f029c.js"><link rel="prefetch" href="/assets/js/24.8df22d57.js"><link rel="prefetch" href="/assets/js/25.ed3f9c64.js"><link rel="prefetch" href="/assets/js/26.fdaad824.js"><link rel="prefetch" href="/assets/js/27.ae095ed2.js"><link rel="prefetch" href="/assets/js/28.f3be2872.js"><link rel="prefetch" href="/assets/js/29.0e288c4c.js"><link rel="prefetch" href="/assets/js/31.ecdd1fb4.js"><link rel="prefetch" href="/assets/js/32.387b5800.js"><link rel="prefetch" href="/assets/js/33.9ba17277.js"><link rel="prefetch" href="/assets/js/34.ba8223a2.js"><link rel="prefetch" href="/assets/js/4.6471d74d.js"><link rel="prefetch" href="/assets/js/5.ad6a474c.js"><link rel="prefetch" href="/assets/js/7.5f9bd84f.js"><link rel="prefetch" href="/assets/js/8.427074d3.js"><link rel="prefetch" href="/assets/js/9.77f58b60.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.a140baa0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8bbe3483.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">寒冰阁序 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">寒冰阁序 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        关于 HTTPS 的一点理解
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">qiupeng</span> <span itemprop="address">   in Guangzhou</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2021-03-02T00:00:00.000Z">
+      Tue Mar 02 2021
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/网络" data-v-42ccfcd5><span data-v-42ccfcd5>网络</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><h1 id="前因"><a href="#前因" class="header-anchor">#</a> 前因</h1> <p>HTTP 是明文传输，不安全。既然如此，很自然想到用密文传输。常见的加密都是对称加密，即双方之间约定好加密规则，然后再进行通信。但是如果加密规则泄漏了，还是明文传输。所以问题就变成了如何告知对方加密规则。前人选择的方式是使用非对称加密。
+加密方和解密房使用不用的密钥。</p> <h1 id="https-的流程"><a href="#https-的流程" class="header-anchor">#</a> HTTPS 的流程</h1> <p>1、Client 发送 https 请求到 Server
+2、Server 把带有自己公钥的CA证书发回给 Client
+3、Client 验证证书
+4、如果证书是合法，Client 确定对称加密算法和生成对称密钥，发回给 Server
+5、Server 用自己的私钥解密，拿到对称加密算法和密钥
+6、之后的通信使用对称加密进行</p> <h1 id="疑问"><a href="#疑问" class="header-anchor">#</a> 疑问</h1> <p>根据以上流程，有以下几点疑问：
+1、为什么 Server 要把自己的公钥放到CA证书里？
+2、Client 如何验证</p> <h1 id="非对称加密"><a href="#非对称加密" class="header-anchor">#</a> 非对称加密</h1> <h1 id="ca、数字证书、数字签名"><a href="#ca、数字证书、数字签名" class="header-anchor">#</a> CA、数字证书、数字签名</h1></div> <footer><!----> <hr> <!----></footer></article> <!----></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3b107010.js" defer></script><script src="/assets/js/6.1d190480.js" defer></script><script src="/assets/js/3.41d2f1e3.js" defer></script><script src="/assets/js/30.67bb441e.js" defer></script>
+  </body>
+</html>
